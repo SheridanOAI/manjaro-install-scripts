@@ -36,15 +36,15 @@ echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 	if [[ "$choice" == "1" ]]; then
 pacman -S plasma manjaro-kde-settings sddm-breath-theme manjaro-settings-manager-knotifier manjaro-settings-manager-kcm pamac pavucontrol-qt && systemctl enable sddm 
 	elif [[ "$choice" == "2" ]]; then
-pacman -S cinnamon cinnamon-wallpapers cinnamon-sounds gnome-terminal parcellite lightdm lightdm-slick-greeter lightdm-settings manjaro-cinnamon-settings adapta-maia-theme kvantum-manjaro pamac pulseaudio pavucontrol && systemctl enable lightdm
+pacman -S cinnamon cinnamon-wallpapers cinnamon-sounds networkmanager gnome-terminal parcellite lightdm lightdm-slick-greeter lightdm-settings manjaro-cinnamon-settings adapta-maia-theme kvantum-manjaro pamac pulseaudio pavucontrol && systemctl enable lightdm
 	elif [[ "$choice" == "3" ]]; then
-pacman -S gnome gnome-extra manjaro-settings-manager pamac pulseaudio pavucontrol && systemctl enable gdm
+pacman -S gnome gnome-extra manjaro-settings-manager pamac pulseaudio pavucontrol networkmanage && systemctl enable gdm
 	elif [[ "$choice" == "4" ]]; then
-pacman -S xfce4-gtk3 xfce4-goodies xfce4-terminal network-manager-applet xfce4-notifyd-gtk3 xfce4-whiskermenu-plugin-gtk3 tumbler pamac engrampa lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings manjaro-settings-manager pulseaudio pavucontrol && systemctl enable lightdm
+pacman -S xfce4-gtk3 xfce4-goodies xfce4-terminal networkmanager network-manager-applet xfce4-notifyd-gtk3 xfce4-whiskermenu-plugin-gtk3 tumbler pamac engrampa lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings manjaro-settings-manager pulseaudio pavucontrol && systemctl enable lightdm
 	elif [[ "$choice" == "5" ]]; then
-pacman -S lxqt xscreensaver lightdm lightdm-slick-greeter lightdm-settings light-locker manjaro-openbox-adapta-maia papirus-maia-icon-theme pamac pulseaudio pavucontrol-qt && systemctl enable lightdm
+pacman -S lxqt xscreensaver lightdm lightdm-slick-greeter lightdm-settings networkmanager network-manager-applet light-locker manjaro-openbox-adapta-maia papirus-maia-icon-theme pamac kate pulseaudio pavucontrol-qt && systemctl enable lightdm
 	elif [[ "$choice" == "6" ]]; then
-pacman -S mate network-manager-applet mate-extra dconf-editor lightdm lightdm-slick-greeter lightdm-settings arc-maia-icon-theme papirus-maia-icon-theme manjaro-settings-manager manjaro-settings-manager-notifier pamac pulseaudio pavucontrol && systemctl enable lightdm
+pacman -S mate networkmanager network-manager-applet mate-extra dconf-editor lightdm lightdm-slick-greeter lightdm-settings arc-maia-icon-theme papirus-maia-icon-theme manjaro-settings-manager manjaro-settings-manager-notifier pamac pulseaudio pavucontrol && systemctl enable lightdm
 	fi
     echo '20. Создаем root пароль'
 passwd
