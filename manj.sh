@@ -44,7 +44,8 @@ mount $DATA2_PARTITION_ $DATA2_LOCATION
 read -p 'SWAP_PARTITION_' SWAP_PARTITION_
 swapon $SWAP_PARTITION_
     echo '08. Копирование скрипта arch2.sh'
-cp /1/manj2.sh /mnt/manj2.sh
+wget https://github.com/SheridanOAI/manjaro-install-scripts/archive/refs/heads/main.zip
+unzip main.zip -d /mnt
     echo '09. Установка зеркал'
 pacman-mirrors --fasttrack --api --protocol https
 
@@ -59,4 +60,4 @@ basestrap /mnt base linux518 mhwd linux-firmware dhcpcd nano
     echo '11. Генерируем fstab'
 fstabgen -U /mnt >> /mnt/etc/fstab
     echo '12. Переход в новое окружение'
-manjaro-chroot /mnt /bin/bash /manj2.sh
+manjaro-chroot /mnt /bin/bash /manjaro-install-scripts-main/manj2.sh
