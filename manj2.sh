@@ -36,7 +36,7 @@ echo 'FONT=cyr-sun16' >> /etc/vconsole.conf
 	if [[ "$choice" == "1" ]]; then
 pacman -S plasma manjaro-kde-settings sddm-breath-theme manjaro-settings-manager-knotifier manjaro-settings-manager-kcm pamac pavucontrol-qt && systemctl enable sddm 
 	elif [[ "$choice" == "2" ]]; then
-pacman -S cinnamon cinnamon-wallpapers cinnamon-sounds gnome-terminal parcellite lightdm lightdm-slick-greeter lightdm-settings manjaro-cinnamon-settings adapta-maia-theme kvantum-manjaro pamac pulseaudio pavucontrol && systemctl enable lightdm
+pacman -S cinnamon cinnamon-translations cinnamon-wallpapers cinnamon-sounds gnome-terminal parcellite lightdm lightdm-slick-greeter lightdm-settings manjaro-cinnamon-settings adapta-maia-theme kvantum-manjaro pamac pulseaudio pavucontrol && systemctl enable lightdm
 	elif [[ "$choice" == "3" ]]; then
 pacman -S gnome gnome-extra manjaro-settings-manager pamac pulseaudio pavucontrol && systemctl enable gdm
 	elif [[ "$choice" == "4" ]]; then
