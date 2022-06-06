@@ -2,6 +2,7 @@
 
 pacman -Sy
 pacman -S manjaro-kering
+pacman -S unzip
 
     #echo 'Выбор места установки разделов (LOCATION)'
   ROOT_LOCATION=/mnt
@@ -43,7 +44,7 @@ mount $DATA2_PARTITION_ $DATA2_LOCATION
     echo '07. Монтирование раздела SWAP'
 read -p 'SWAP_PARTITION_' SWAP_PARTITION_
 swapon $SWAP_PARTITION_
-    echo '08. Копирование скрипта arch2.sh'
+    echo '08. Копирование и распаковка архива с github'
 wget https://github.com/SheridanOAI/manjaro-install-scripts/archive/refs/heads/main.zip
 unzip main.zip -d /mnt
     echo '09. Установка зеркал'
