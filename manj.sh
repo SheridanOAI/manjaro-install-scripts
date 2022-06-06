@@ -18,9 +18,9 @@ pacman -S unzip
     echo '1 - BTRFS, 2 - EXT4'
     read choice
       if [[ "$choice" == "1" ]]; then
-mkfs.btrfs -L Arch -f $DEV_ && mount $DEV_ /mnt && cd /mnt && btrfs sub cre @ && btrfs sub cre @home && btrfs sub cre @cache && btrfs sub cre @log && cd / && umount /mnt
+mkfs.btrfs -L Manj -f $DEV_ && mount $DEV_ /mnt && cd /mnt && btrfs sub cre @ && btrfs sub cre @home && btrfs sub cre @cache && btrfs sub cre @log && cd / && umount /mnt
     elif [[ "$choice" == "2" ]]; then
-mkfs.ext4 -L Arch $DEV_ && mount $DEV_ /mnt && mkdir /mnt/{data,data2} && mkdir -p /mnt/boot/efi && cd / && umount /mnt
+mkfs.ext4 -L Manj $DEV_ && mount $DEV_ /mnt && mkdir /mnt/{data,data2} && mkdir -p /mnt/boot/efi && cd / && umount /mnt
       fi
 
     echo '03. Монтирование раздела ROOT'
