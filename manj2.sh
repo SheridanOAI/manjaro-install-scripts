@@ -69,4 +69,5 @@ update-grub
 pacman -S $PACKAGES
     echo '29. Раскоментируем sudoers'
 sed -i '82c%wheel ALL=(ALL) ALL' /etc/sudoers
+    echo '30. Удаляем распакованный ахив (manjaro-install-scripts-main)'
 rm -rf /manjaro-install-scripts-main
